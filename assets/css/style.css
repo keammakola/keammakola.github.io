@@ -1984,7 +1984,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(120deg, #1a2a6c, #fdbb2d 40%, #b21f1f 80%);
   background-size: 200% 200%;
-  animation: gradientMove 8s ease-in-out infinite;
+  animation: gradientMove 15s ease-in-out infinite;
 }
 
 @keyframes gradientMove {
