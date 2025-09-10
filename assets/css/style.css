@@ -780,7 +780,7 @@ main {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  color: var(--white-2);
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
@@ -802,13 +802,13 @@ main {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-white-10);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
 
 .timeline-text {
-  color: var(--light-gray);
+  color: var(--light-gra);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
@@ -2185,14 +2185,6 @@ body, .sidebar, article, .content-card, .service-item, .testimonials-modal, .cli
   box-shadow: none !important;
 }
 
-/* Optional: make buttons glassy */
-button, .form-btn, .cv-download-btn {
-  background: rgba(253, 187, 45, 0.18) !important;
-  color: #fff !important;
-  border: none !important;
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
-}
 
 /* ...existing code... */
 /* ...existing code... */
@@ -2255,4 +2247,84 @@ button, .form-btn, .cv-download-btn {
   font-size: 1.5em;
   margin-right: 8px;
   vertical-align: middle;
+}
+
+/* Glassmorphism for main containers */
+.sidebar,
+.main-content,
+article,
+.content-card,
+.service-item,
+.testimonials-modal,
+.modal-container,
+.clients{
+  background: rgba(34, 34, 34, 0.144) !important; /* more transparent */
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-radius: 22px !important;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Make separators subtle */
+.separator {
+  background: rgba(253, 187, 45, 0) !important;
+}
+
+/* Make main-content background transparent */
+.main-content {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Soften input backgrounds */
+.form-input, textarea.form-input {
+  background: rgba(34, 34, 34, 0.37) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Glassy buttons */
+button, .form-btn, .cv-download-btn {
+  background: rgba(253, 187, 45, 0.18) !important;
+  color: #fff !important;
+  border: none !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border-radius: 12px !important;
+}
+
+/* Ensure text is readable */
+body, .sidebar, article, .content-card, .service-item, .testimonials-modal, .clients, .tech-item, .main-content {
+  color: #fff !important;
+}
+
+/* Optional: add a subtle text shadow for readability */
+body, .main-content, .sidebar, .tech-item span, .about-text, .service-item-text {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+/* Set global font family */
+:root {
+  --ff-main: 'Inter', 'Poppins', Arial, sans-serif;
+}
+
+html, body, * {
+  font-family: var(--ff-main) !important;
+}
+/* Fix sidebar cropping on mobile */
+@media (max-width: 600px) {
+  .sidebar {
+    max-height: none !important;
+    height: auto !important;
+    padding: 12px !important;
+    border-radius: 14px !important;
+    overflow: visible !important;
+  }
+  .sidebar-info,
+  .sidebar-info_more {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
 }

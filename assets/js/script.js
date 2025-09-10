@@ -28,3 +28,12 @@ const nav = document.querySelector('nav');
 document.addEventListener('click', () => {
   nav.classList.toggle('show');
 });
+document.addEventListener('DOMContentLoaded', function () {
+  const sidebarBtn = document.querySelector('[data-sidebar-btn]');
+  const sidebar = document.querySelector('.sidebar');
+  if (sidebarBtn && sidebar) {
+    sidebarBtn.addEventListener('click', function () {
+      sidebar.classList.toggle('active');
+    });
+  }
+});
