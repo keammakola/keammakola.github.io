@@ -519,7 +519,7 @@ main {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
+  /* background: var(--bg-gradient-jet); */
   border-radius: inherit;
   z-index: -1;
 }
@@ -2548,4 +2548,3 @@ html, body, * {
   width: 20px;
   height: 20px;
   margin: 0 5px;
-}
