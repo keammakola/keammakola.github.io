@@ -3,9 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const list = document.getElementById("tech-stack-list");
   if (!list) return;
 
-  // Duplicate the content for seamless scroll
-  list.innerHTML += list.innerHTML;
-
   let scrollAmount = 0;
   const speed = 2; // Adjust for faster/slower scroll
   const interval = 16; // 16ms = 60fps
