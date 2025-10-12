@@ -1,11 +1,11 @@
-// Perfectly smooth, seamless auto-scroll for tech stack
+
 document.addEventListener("DOMContentLoaded", function () {
   const list = document.getElementById("tech-stack-list");
   if (!list) return;
 
   let scrollAmount = 0;
-  const speed = 2; // Adjust for faster/slower scroll
-  const interval = 16; // 16ms = 60fps
+  const speed = 2; 
+  const interval = 16; 
 
   function autoScroll() {
     scrollAmount += speed;
