@@ -134,6 +134,31 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+// Handle Netlify form submission via AJAX
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => {
+      // Success! Clear form and show a message
+      form.reset();
+      alert("Thank you! Your message has been sent successfully.");
+      // Optional: Disable button again after reset
+      if (formBtn) formBtn.setAttribute("disabled", "");
+    })
+    .catch((error) => {
+      alert("Oops! There was a problem submitting your form.");
+    });
+  });
+}
+
 
 
 // page navigation variables
